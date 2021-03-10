@@ -1,8 +1,22 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import App from './App.vue';
 
-Vue.config.productionTip = false
+import './assets/styles/index.css';
+import '@fortawesome/fontawesome-free/css/all.css';
+import '@fortawesome/fontawesome-free/js/all.js';
+
+Vue.config.productionTip = true;
+
+Vue.use(VueRouter);
+
+const router = new VueRouter({
+  routes: [
+    // { path: '/page', component: App },
+  ],
+});
 
 new Vue({
   render: h => h(App),
-}).$mount('#app')
+  router
+}).$mount('#app');
